@@ -11,13 +11,13 @@ year = input("What is the analzed year: ")
 #b2 - Receivables - należności'
 #c1 - Payables- zobowiązania wobec dostawców'
 
-a1 = int(input("Earnings Before Interest and Taxes: "))
-a2 = int(input("Capital assets: "))
-b1 = int(input("Inventories: "))
-b2 = int(input("Receivables: "))
-c1 = int(input("Payables: "))
+a1 = float(input("Earnings Before Interest and Taxes: "))
+a2 = float(input("Capital assets: "))
+b1 = float(input("Inventories: "))
+b2 = float(input("Receivables: "))
+c1 = float(input("Payables: "))
 
 #ROIC formula'
-Roic = str((a1)/((a2)+b1+b2-c1))
+Roic = float((a1)/((a2)+b1+b2-c1))
 
-print("W roku " + year + " firma " + name + " wygenerowała ROIC o wartości " + Roic)
+print("W roku",year,"firma",name,"wygenerowała ROIC o wartości",round(Roic,2))
