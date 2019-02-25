@@ -1,0 +1,18 @@
+print("******************************************")
+dictionary = {
+"ROIC": 0.15,
+"ROE": 0.1,
+"ROA":0.12,
+"ROS":0.14
+    }
+
+print("It's available indicators: ",list(dictionary.keys()))
+print("******************************************")
+name=input("Which indicator you would like to choose?: ")
+print("Indicator {} has value {}".format(name, dictionary[name]))
+print("******************************************")
+new=input("Would you like to add new indicator?: ")
+indicator=("What value is"+ new + "?")
+dictionary[new]=str(indicator)
+print("******************************************")
+print(list(dictionary.keys())) 

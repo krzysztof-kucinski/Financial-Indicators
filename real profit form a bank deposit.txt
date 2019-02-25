@@ -1,0 +1,69 @@
+
+#a1 = Collected capital - zebrany kapita³
+
+#a2 = Interest rate on the deposit - oprocentowanie lokaty
+
+#a3 = Inflation - poziom inflacji (2,5%)
+
+#a4 = Capital gains tax (Belka's tax) - podatek od zysków kapita³owych (podatek belki)
+
+#a5 = Number of full deposit periods (in years) - iloœæ pe³nych okresów (w latach)
+
+
+
+a1=float(input("Collected capital:"))
+
+a2=float(input("Interest rate on the deposit:"))
+
+a3=float(0.025)
+
+a4=float(0.19)
+
+
+print("Inflation rate:",round(a3,2))
+
+print("Capital gains tax (Belka's tax):",round(a4,2))
+
+
+a5=float(input("Number of full deposit periods (in years):"))
+
+
+
+#b1 = Kapita³ x oprocentowanie lokaty - Capital x interest rate on the deposit
+
+#b2 = Podatek od zysków kapita³owych  - Capital gains tax
+
+#b3 = Kapita³ + Rzeczywisty zysk z lokaty - Capital + Real investment profit
+
+#b4 = Rzeczywisty wartoœæ na koniec okresu  (po uwzglêdnieniu Inflacji) - Real value at the end of the period (after taking into account inflation
+#b5 = Realny zysk z lokaty - Real profit on the deposit
+
+print()
+
+
+b1 = float(a1*a2)
+print("Your Capital x interest rate on the deposit is:",round(b1,2))
+
+
+
+b2 = float(b1-(b1*a4))
+
+print("Your Capital gains tax is:", round(b2,2))
+
+
+
+b3 = float(a1+b2)
+
+print("Your Capital + Real investment profit is:",round(b3,2))
+
+
+
+b4 = float(b3/(1+a3)**a5)
+
+print("Your Real value at the end of the period (after taking into account inflation) is:",round(b4,2))
+
+
+
+b5 = float(b4-a1)
+
+print("Your Real profit on the deposit is:",round(b5,2))
